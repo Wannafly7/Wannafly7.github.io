@@ -2,28 +2,34 @@
 <html>
 <head>
     <title>Рехамл: Книга о переходе в разные состояния</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <meta charset="UTF-8">
     <style>
         body, html {
             margin: 0;
             padding: 0;
+            width: 100%;
             height: 100%;
+            overflow: hidden;
         }
-        #viewerContainer {
+        .pdf-container {
             width: 100%;
             height: 100vh;
-            overflow: auto;
+        }
+        embed {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <div id="viewerContainer">
-        <iframe 
-            src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/web/viewer.html?file=Rehaml.pdf"
+    <div class="pdf-container">
+        <embed 
+            src="your-book.pdf" 
+            type="application/pdf" 
             width="100%" 
-            height="100%" 
-            style="border: none;">
-        </iframe>
+            height="100%"
+        >
     </div>
 </body>
 </html>
