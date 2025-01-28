@@ -3,10 +3,30 @@
 <head>
     <title>Моя книга</title>
     <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .pdf-container {
+            width: 100%;
+            height: 100vh;
+            max-width: 1000px;
+        }
+    </style>
 </head>
 <body>
     <h1>Моя книга</h1>
-    <p>Нажмите на ссылку ниже, чтобы открыть книгу:</p>
-    <a href="Rehaml.pdf">Читать книгу (PDF)</a>
+    <div class="pdf-container">
+        <embed 
+            src="Rehaml.pdf" 
+            type="application/pdf" 
+            width="100%" 
+            height="100%"
+        >
+    </div>
 </body>
 </html>
